@@ -46,7 +46,7 @@ namespace MVCEnrollmentApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EnrollmentId,StudentId,CourseId,Grade,StudentObject,CourseObject")] Enrollment enrollment)
+        public ActionResult Create([Bind(Include = "EnrollmentId,StudentId,CourseId,Grade,StudentObject,CourseObject,IsActive, AssignedCampus, EnrollmentSemester,EnrollmentYear")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace MVCEnrollmentApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EnrollmentId,StudentId,CourseId,Grade,StudentObject,CourseObject")] Enrollment enrollment)
+        public ActionResult Edit([Bind(Include = "EnrollmentId,StudentId,CourseId,Grade,StudentObject,CourseObject, IsActive, AssignedCampus,EnrollmentSemester, EnrollmentYear")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
             {
