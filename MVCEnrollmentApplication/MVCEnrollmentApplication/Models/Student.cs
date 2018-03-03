@@ -11,10 +11,10 @@ namespace MVCEnrollmentApplication.Models
         [Required(ErrorMessage = "Student ID")]
         public virtual int StudentId { get; set; }
         [Required]
-            [Range (1, 50, ErrorMessage = "Last Name")]
-        public virtual int StudentLastName{ get; set; }
+            [StringLength(50, ErrorMessage = "Last Name")]
+        public virtual string StudentLastName{ get; set; }
         [Required]
-        [Range(1, 50, ErrorMessage = "First Name")]
-        public virtual int StudentFirstName { get; set; }
+        [StringLength(50, ErrorMessage = "First Name")]
+        public virtual string StudentFirstName { get; set; }
     }
 }
