@@ -26,5 +26,6 @@ namespace MVCEnrollmentApplication.Controllers
 
             return View();
         }
+
     }
 }

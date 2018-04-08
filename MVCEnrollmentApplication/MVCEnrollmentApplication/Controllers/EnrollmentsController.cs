@@ -20,6 +20,17 @@ namespace MVCEnrollmentApplication.Controllers
             return View(db.Enrollments.ToList());
         }
 
+        public ActionResult StudentSearch(string q)
+        {
+            var students = GetStudents(q);
+            return PartialView(students);
+        }
+
+        private List<Student> GetStudents(string searchstring)
+        {
+            return db.Students.Where(a => a.StudentFirstName.Contains(searchstring)).ToList();
+        }
+
         // GET: Enrollments/Details/5
         public ActionResult Details(int? id)
         {

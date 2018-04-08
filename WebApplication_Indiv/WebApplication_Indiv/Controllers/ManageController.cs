@@ -10,7 +10,7 @@ using WebApplication_Indiv.Models;
 
 namespace WebApplication_Indiv.Controllers
 {
-    [Authorize]
+    
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
