@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 namespace MVCMusicStoreApplication.Models
 {
-    [Bind(Exclude("AlbumID"))]
+    
 
     public class Album
     {
