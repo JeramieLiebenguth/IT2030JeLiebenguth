@@ -20,6 +20,31 @@ namespace MVCEnrollmentApplication.Controllers
             return View(db.Students.ToList());
         }
 
+
+        public ActionResult StudentoftheMonth()
+        {
+            var student = GetStudentoftheMonth();
+            return PartialView("_StudentoftheMonth");
+        }
+
+        private Student GetStudentoftheMonth()
+        {
+            var student = db.Students.OrderBy(a => System.Guid.NewGuid()).First();
+
+        return student;
+    }
+
+        public ActionResult StudentSearch(String q)
+        {
+            var students = GetStudents(q);
+            return PartialView(students);
+        }
+
+        private List<Student> GetStudents(String searchstring)
+        {
+            return db.Students.Where(a => a.StudentFirstName.Contains(searchstring)).ToList();
+        }
+
         // GET: Students/Details/5
         public ActionResult Details(int? id)
         {

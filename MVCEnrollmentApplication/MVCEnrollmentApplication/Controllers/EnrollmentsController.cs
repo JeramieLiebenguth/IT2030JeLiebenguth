@@ -20,6 +20,7 @@ namespace MVCEnrollmentApplication.Controllers
             return View(db.Enrollments.ToList());
         }
 
+
         // GET: Enrollments/Details/5
         public ActionResult Details(int? id)
         {

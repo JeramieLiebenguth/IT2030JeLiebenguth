@@ -5,8 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace WebApplication_Indiv.Controllers
-{
 
+{
+    [Authorize]
     public class HomeController : Controller
     {
    
