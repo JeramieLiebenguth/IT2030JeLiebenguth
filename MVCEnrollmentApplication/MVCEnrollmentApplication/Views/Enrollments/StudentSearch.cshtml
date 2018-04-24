@@ -1,0 +1,9 @@
+﻿@model IEnumerable<MVCEnrollmentApplication.Models.Student>
+
+    <div id="search Results">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.StudentFirstName</li>
+        }
+    </div>
