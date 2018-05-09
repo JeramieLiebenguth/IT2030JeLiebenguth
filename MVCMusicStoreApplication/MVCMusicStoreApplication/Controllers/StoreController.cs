@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCMusicStoreApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace MVCMusicStoreApplication.Controllers
 {
     public class StoreController : Controller
     {
-        MVCMusicStoreDb db. = new MVCMusicStoreDB();
+        MVCMusicStoreDB db = new MVCMusicStoreDB();
 
         //Browse by Genre
         public ActionResult Browse()
