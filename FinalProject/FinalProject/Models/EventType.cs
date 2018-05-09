@@ -9,6 +9,6 @@ namespace FinalProject.Models
     {
         public virtual int EventTypeID { get; set; }
         public virtual string EventTypeName { get; set; }
-        public virtual List<OrganizeEvent> OrganizeEvent { get; set; }
+        public virtual List<OrganizeEvent> OrganizeEvents { get; set; }
     }
 }

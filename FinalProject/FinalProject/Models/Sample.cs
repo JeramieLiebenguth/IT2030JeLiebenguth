@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace FinalProject.Models
 {
-    public class SampleData : DropCreateDatabaseIfModelChanges<FinalProjectDB>
+    public class Sample : DropCreateDatabaseIfModelChanges<FinalProjectDB>
     {
         protected override void Seed(FinalProjectDB context)
         {
